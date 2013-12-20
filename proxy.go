@@ -730,7 +730,7 @@ func connectDirect(url *URL, siteInfo *VisitCnt) (net.Conn, error) {
 		debug.Printf("error direct connect to: %s %v\n", url.HostPort, err)
 		return nil, err
 	}
-	// debug.Println("directly connected to", url.HostPort)
+	info.Println("directly connected to", url.String())
 	return directConn{c}, nil
 }
 
